@@ -1,38 +1,66 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  background-color: #eee;
+  color: #eee;
+  font-family: "Space Mono", "Courier New", Courier, monospace;
+}
+
+.flex-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.styleCard {
+  max-width: 80%;
+  background-color: #2d2d2d;
+  -webkit-box-shadow: 25px 25px 0px 0px rgba(142,142,142,1);
+  -moz-box-shadow: 25px 25px 0px 0px rgba(142,142,142,1);
+  box-shadow: 25px 25px 0px 0px rgba(142,142,142,1);
+}
+
+.quote {
+  margin-bottom: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#text {
+  font-size: 32px;
+}
+#author {
+  font-size: 20px;
+  font-style: italic;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 700px) {
+  #text {
+  font-size: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  #author {
+    font-size: 16px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .btn {
+    font-size: 14px;
+  }
+  
+  .styleCard {
+    max-width: 100%;
+    background-color: #2d2d2d;
+    -webkit-box-shadow: 0px 25px 0px 0px rgba(142,142,142,1);
+    -moz-box-shadow: 0px 25px 0px 0px rgba(142,142,142,1);
+    box-shadow: 0px 25px 0px 0px rgba(142,142,142,1);
   }
 }
